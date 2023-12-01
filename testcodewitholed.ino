@@ -43,7 +43,19 @@ pinMode(2,INPUT_PULLUP);
   display.clearDisplay(); 
 //capacitance
   pinMode(chargePin, OUTPUT);     
-  digitalWrite(chargePin, LOW);  
+  digitalWrite(chargePin, LOW); 
+  display.clearDisplay();
+  display.setTextSize(2);
+  display.setTextColor(WHITE);
+  display.setCursor(5, 0);
+  display.println("GROUP 1");
+  display.drawLine(0, 17, 128, 17, WHITE);
+  display.setTextSize(1);
+  display.setCursor(10, 27);
+  display.setTextSize(1);
+  display.println("MINI PROJECT");
+  display.display(); 
+  delay(3000);
 }
 void disp(String mode, float val, String unit){
   display.clearDisplay();
